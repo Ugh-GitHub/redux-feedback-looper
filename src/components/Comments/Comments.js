@@ -9,7 +9,7 @@ class Comments extends Component {
 
     updateStore = () => {
         this.props.dispatch({type: 'COMMENTS_UPDATE', payload: this.state.inputText});
-        this.props.history.push('/review')
+        this.props.history.push('/review');
     }
 
     handleChange = (event, typeOfKey) => {

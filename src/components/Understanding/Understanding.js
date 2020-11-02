@@ -9,7 +9,7 @@ class Understanding extends Component {
 
     updateStore = () => {
         this.props.dispatch({type: 'UNDERSTANDING_UPDATE', payload: this.state.inputText});
-        this.props.history.push('/support')
+        this.props.history.push('/support');
     }
 
     handleChange = (event, typeOfKey) => {

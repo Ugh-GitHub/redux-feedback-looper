@@ -28,6 +28,12 @@ const reviewReducer = (state = {feeling: '', understanding: '', support: '', com
             state.comments= action.payload;
             console.log("Hello from the reducers", state);
             return state;
+        case 'NEW_REVIEW':
+            state.feeling="";
+            state.understanding="";
+            state.support="";
+            state.comments="";
+            return state;
         default:
             return state;
     }

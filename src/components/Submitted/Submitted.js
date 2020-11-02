@@ -3,24 +3,18 @@ import { connect } from 'react-redux';
 import { HashRouter as Link } from 'react-router-dom';
 
 class Submitted extends Component {
-    state = {
-        inputFilled: 0,  // inputFilled.length, used to capture that the input has at least SOMETHING in it. 
-                        // Could increase the # in the conditional to increase the minimum character requirement
-        // updateStore  // A function for dispatching the output to the index.js file
-        nextRoute: ''   // nextRoute is a string, used to indicate where to go next in the review submission process
-    }
-
+    
     render(){
         return(
-            <>
+            <div>
+                Thanks for submitting a review!
                 
-                
-            </>
+            </div>
         )
     }
 }
 
-
+// This is unneccesary. However, I'm against a deadline and sleep is better.
 const putReduxStateOnProps = (reduxState) => ({
     reduxState: reduxState
   });

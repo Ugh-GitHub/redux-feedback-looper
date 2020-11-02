@@ -9,7 +9,7 @@ class Support extends Component {
 
     updateStore = () => {
         this.props.dispatch({type: 'SUPPORT_UPDATE', payload: this.state.inputText});
-        this.props.history.push('/comments')
+        this.props.history.push('/comments');
     }
 
     handleChange = (event, typeOfKey) => {
