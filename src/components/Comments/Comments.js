@@ -25,6 +25,8 @@ class Comments extends Component {
             <div>
                 <label htmlFor='Comments'>Comments</label>
                 <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
+                <br/>
+                <br/>
                 <button onClick={this.updateStore}>Next</button>
                 
             </div>

@@ -8,7 +8,7 @@ class Review extends Component {
         // submit the data to the database and then clear the store
         console.log('clicked submitReview');
         axios.post('/reviews', this.props.reduxState.reviewReducer).then((response) => {
-            this.props.dispatch({type: 'NEW_REVIEW', payload: response.data})
+            
         }).catch((error) => {
             console.log(error);
         });
@@ -27,7 +27,8 @@ class Review extends Component {
                 Support: {this.props.reduxState.reviewReducer.support}
                 <br/>
                 Comments: {this.props.reduxState.reviewReducer.comments} 
-
+                <br/>
+                <br/>
                 <button onClick={this.submitReview}>Submit</button>
             </div>
         )

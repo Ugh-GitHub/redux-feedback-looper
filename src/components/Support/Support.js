@@ -33,8 +33,8 @@ class Support extends Component {
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                        
-                
+                <br/>        
+                <br/>
                 {this.state.inputText.length > 0 ?
                     <button onClick={this.updateStore}>Next</button>
                 :
