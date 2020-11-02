@@ -24,8 +24,15 @@ class Feeling extends Component {
         return(
             <div>
                 <label htmlFor='Feeling'>Feeling</label>
-                <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
-                
+                {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
+                <select id="inputText" name="inputText" onChange={(event) => this.handleChange(event, 'inputText')}>
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                         
                 
                 {this.state.inputText.length > 0 ?
