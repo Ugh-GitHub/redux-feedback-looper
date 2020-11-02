@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import Select from '@material-ui/core/Select';
 
 class Feeling extends Component {
     state = {
         inputText: ''
+    }
+    componentDidMount = () => {
+        this.setState({
+            inputText: this.props.reduxState.reviewReducer.feeling
+        })
     }
 
     // dispatch the input to the store, and then kick over to the next page
@@ -35,14 +41,14 @@ class Feeling extends Component {
                     not go to the redux store for the first input to avoid a visual bug
                     2. Was bringing it up visually when the user went back a page, but disabled
                     the button conditional. If I had more time I would test/play around more*/}
-                    <select defaultValue={this.props.reduxState.reviewReducer.feeling} onChange={(event) => this.handleChange(event, 'inputText')}>
+                    <Select defaultValue={this.props.reduxState.reviewReducer.feeling} onChange={(event) => this.handleChange(event, 'inputText')}>
                         <option value=""></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                    </select>
+                    </Select>
                     <br/>        
                     <br/>
                     {this.state.inputText.length > 0 ?

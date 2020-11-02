@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import Select from '@material-ui/core/Select';
 
 class Understanding extends Component {
     state = {
         inputText: ''
+    }
+    componentDidMount = () => {
+        this.setState({
+            inputText: this.props.reduxState.reviewReducer.understanding
+        })
     }
 
     updateStore = () => {
@@ -30,14 +36,14 @@ class Understanding extends Component {
             <div>
                 <label htmlFor='Understanding'>Understanding</label>
                 {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
-                <select defaultValue={this.props.reduxState.reviewReducer.understanding} onChange={(event) => this.handleChange(event, 'inputText')}>
+                <Select defaultValue={this.props.reduxState.reviewReducer.understanding} onChange={(event) => this.handleChange(event, 'inputText')}>
                     <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-                </select>
+                </Select>
                 <br/>     
                 <br/>
                 <Button variant="contained" onClick={this.goBack}>Edit Previous</Button>
