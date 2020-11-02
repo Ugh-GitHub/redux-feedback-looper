@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { HashRouter as Link } from 'react-router-dom';
 
-class Comments extends Component {
+class Button extends Component {
     state = {
         inputFilled: 0,  // inputFilled.length, used to capture that the input has at least SOMETHING in it. 
                         // Could increase the # in the conditional to increase the minimum character requirement
@@ -14,15 +13,14 @@ class Comments extends Component {
         return(
             <>
                 
-                
+                {this.props.inputFilled > 0 ?
+                    <button onClick={this.props.updateStore}><Link to={this.props.nextRoute}>Next</Link></button>
+                :
+                    <button disabled>Next</button>
+                }
             </>
         )
     }
 }
 
-
-const putReduxStateOnProps = (reduxState) => ({
-    reduxState: reduxState
-  });
-  
-  export default connect(putReduxStateOnProps)(Comments);
+export default Button;
