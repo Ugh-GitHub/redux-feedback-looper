@@ -13,27 +13,19 @@ const reviewReducer = (state = {feeling: '', understanding: '', support: '', com
     
     switch(action.type){
         case 'FEELING_UPDATE':
-            this.setState({
-                feeling: action.payload
-            })
+            state.feeling= action.payload;
             console.log("Hello from the reducers", state);
             return state;
         case 'UNDERSTANDING_UPDATE':
-            this.setState({
-                understanding: action.payload
-            })
+            state.understanding= action.payload;
             console.log("Hello from the reducers", state);
             return state;
         case 'SUPPORT_UPDATE':
-            this.setState({
-                support: action.payload
-            })
+            state.support= action.payload;
             console.log("Hello from the reducers", state);
             return state;
         case 'COMMENTS_UPDATE':
-            this.setState({
-                comments: action.payload
-            })
+            state.comments= action.payload;
             console.log("Hello from the reducers", state);
             return state;
         default:

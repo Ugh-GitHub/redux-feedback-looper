@@ -21,7 +21,7 @@ class App extends Component {
           <br/>
 
           {/* Routes go here */}
-          <Route exact path="/feeling" component={Feeling} />
+          <Route exact path="/" component={Feeling} />
           <Route exact path="/understanding" component={Understanding} />
           <Route exact path="/support" component={Support} />
           <Route exact path="/comments" component={Comments} />
