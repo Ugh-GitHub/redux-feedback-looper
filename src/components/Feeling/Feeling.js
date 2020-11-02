@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Link } from 'react-router-dom';
-import Button from '../Button/Button';
+import { HashRouter as Link, withRouter } from 'react-router-dom';
+
 
 class Feeling extends Component {
     state = {
         inputText: ''
-        //inputFilled: 0,  // inputFilled.length, used to capture that the input has at least SOMETHING in it. 
-                        // Could increase the # in the conditional to increase the minimum character requirement
-        // updateStore  // A function for dispatching the output to the index.js file
-        //nextRoute: ''   // nextRoute is a string, used to indicate where to go next in the review submission process
     }
 
     updateStore = () => {
         this.props.dispatch({type: 'COMMENTS_UPDATE', payload: this.state.inputText});
+        this.props.history.push('/understanding')
     }
 
     handleChange = (event, typeOfKey) => {
@@ -26,15 +23,18 @@ class Feeling extends Component {
 
     render(){
         return(
-            <>
+            <div>
+                <label htmlFor='Feeling'>Feeling</label>
                 <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
+                
+                        
+                
                 {this.state.inputText.length > 0 ?
-                    <button onClick={this.updateStore}><Link to='/understanding'>Next</Link></button>
+                    <button onClick={this.updateStore}>Next</button>
                 :
                     <button disabled>Next</button>
                 }
-                {/* <Button inputFilled={this.state.inputText} updateStore={this.updateStore} nextRoute={this.state.nextRoute} /> */}
-            </>
+            </div>
         )
     }
 }
@@ -44,4 +44,5 @@ const putReduxStateOnProps = (reduxState) => ({
     reduxState: reduxState
   });
   
-  export default connect(putReduxStateOnProps)(Feeling);
+const FeelingWithRouter = withRouter(Feeling);
+export default connect(putReduxStateOnProps)(FeelingWithRouter);

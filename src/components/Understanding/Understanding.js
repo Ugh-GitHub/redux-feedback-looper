@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link } from 'react-router-dom';
-import Button from '../Button/Button';
+
 
 class Understanding extends Component {
     state = {
@@ -30,7 +30,7 @@ class Understanding extends Component {
         return(
             <>
                 <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
-                <Button inputFilled='1' updateStore={this.updateStore} nextRoute='/support' />
+                
             </>
         )
     }
