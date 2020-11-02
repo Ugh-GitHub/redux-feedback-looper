@@ -28,7 +28,12 @@ class Feeling extends Component {
                 <label htmlFor='Feeling'>Feeling</label>
                 {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
                 {/* Dropdown from 1-5 */}
-                <select id="inputText" name="inputText" onChange={(event) => this.handleChange(event, 'inputText')}>
+                {/* Tried a value property for the select input going to the redux store, 
+                but caused two problems: 1. Would have needed a whole conditional to  
+                not go to the redux store for the first input to avoid a visual bug
+                2. Was bringing it up visually when the user went back a page, but disabled
+                the button conditional. If I had more time I would test/play around more*/}
+                <select onChange={(event) => this.handleChange(event, 'inputText')}>
                     <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>

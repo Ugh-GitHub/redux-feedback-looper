@@ -16,6 +16,10 @@ class Review extends Component {
         this.props.history.push('/submitted');
     }
 
+    goBack = () => {
+        this.props.history.push('/comments');
+    }
+
     render(){
         return(
             <div>
@@ -29,6 +33,8 @@ class Review extends Component {
                 Comments: {this.props.reduxState.reviewReducer.comments} 
                 <br/>
                 <br/>
+                <button onClick={this.goBack}>Edit Previous</button>
+                <span>       </span>
                 <button onClick={this.submitReview}>Submit</button>
             </div>
         )

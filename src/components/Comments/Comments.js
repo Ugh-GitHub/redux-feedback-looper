@@ -19,6 +19,10 @@ class Comments extends Component {
         });
         console.log(this.state.inputText);
       }
+    
+    goBack = () => {
+        this.props.history.push('/support');
+    }
 
     render(){
         return(
@@ -27,6 +31,8 @@ class Comments extends Component {
                 <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
                 <br/>
                 <br/>
+                <button onClick={this.goBack}>Edit Previous</button>
+                <span>       </span>
                 <button onClick={this.updateStore}>Next</button>
                 
             </div>

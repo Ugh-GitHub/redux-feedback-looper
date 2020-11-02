@@ -20,12 +20,16 @@ class Understanding extends Component {
         console.log(this.state.inputText);
       }
 
+    goBack = () => {
+        this.props.history.push('/');
+    }
+
     render(){
         return(
             <div>
                 <label htmlFor='Understanding'>Understanding</label>
                 {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
-                <select id="inputText" name="inputText" onChange={(event) => this.handleChange(event, 'inputText')}>
+                <select onChange={(event) => this.handleChange(event, 'inputText')}>
                     <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -35,6 +39,8 @@ class Understanding extends Component {
                 </select>
                 <br/>     
                 <br/>
+                <button onClick={this.goBack}>Edit Previous</button>
+                <span>       </span>
                 {this.state.inputText.length > 0 ?
                     <button onClick={this.updateStore}>Next</button>
                 :
