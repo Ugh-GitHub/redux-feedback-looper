@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
     state = {
@@ -28,12 +29,12 @@ class Comments extends Component {
         return(
             <div>
                 <label htmlFor='Comments'>Comments</label>
-                <input type='text' onChange={(event) => this.handleChange(event, 'inputText')}></input>
+                <input type='text' defaultValue={this.props.reduxState.reviewReducer.comments} onChange={(event) => this.handleChange(event, 'inputText')}></input>
                 <br/>
                 <br/>
-                <button onClick={this.goBack}>Edit Previous</button>
+                <Button variant="contained" onClick={this.goBack}>Edit Previous</Button>
                 <span>       </span>
-                <button onClick={this.updateStore}>Next</button>
+                <Button variant="contained" onClick={this.updateStore}>Next</Button>
                 
             </div>
         )

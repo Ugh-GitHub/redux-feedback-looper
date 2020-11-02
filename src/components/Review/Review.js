@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 class Review extends Component {
     submitReview = () => {
@@ -33,9 +34,9 @@ class Review extends Component {
                 Comments: {this.props.reduxState.reviewReducer.comments} 
                 <br/>
                 <br/>
-                <button onClick={this.goBack}>Edit Previous</button>
+                <Button variant="contained" onClick={this.goBack}>Edit Previous</Button>
                 <span>       </span>
-                <button onClick={this.submitReview}>Submit</button>
+                <Button variant="contained" onClick={this.submitReview}>Submit</Button>
             </div>
         )
     }

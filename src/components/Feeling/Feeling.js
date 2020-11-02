@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Feeling extends Component {
     state = {
@@ -24,31 +25,33 @@ class Feeling extends Component {
 
     render(){
         return(
-            <div>
-                <label htmlFor='Feeling'>Feeling</label>
-                {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
-                {/* Dropdown from 1-5 */}
-                {/* Tried a value property for the select input going to the redux store, 
-                but caused two problems: 1. Would have needed a whole conditional to  
-                not go to the redux store for the first input to avoid a visual bug
-                2. Was bringing it up visually when the user went back a page, but disabled
-                the button conditional. If I had more time I would test/play around more*/}
-                <select onChange={(event) => this.handleChange(event, 'inputText')}>
-                    <option value=""></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <br/>        
-                <br/>
-                {this.state.inputText.length > 0 ?
-                    <button onClick={this.updateStore}>Next</button>
-                :
-                    <button disabled>Next</button>
-                }
-            </div>
+            
+                <div>
+                    <label htmlFor='Feeling'>Feeling</label>
+                    {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
+                    {/* Dropdown from 1-5 */}
+                    {/* Tried a value property for the select input going to the redux store, 
+                    but caused two problems: 1. Would have needed a whole conditional to  
+                    not go to the redux store for the first input to avoid a visual bug
+                    2. Was bringing it up visually when the user went back a page, but disabled
+                    the button conditional. If I had more time I would test/play around more*/}
+                    <select defaultValue={this.props.reduxState.reviewReducer.feeling} onChange={(event) => this.handleChange(event, 'inputText')}>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br/>        
+                    <br/>
+                    {this.state.inputText.length > 0 ?
+                        <Button variant="contained" onClick={this.updateStore}>Next</Button>
+                    :
+                        <Button variant="contained" disabled>Next</Button>
+                    }
+                </div>
+            
         )
     }
 }

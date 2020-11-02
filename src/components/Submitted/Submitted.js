@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Submitted extends Component {
     restart = () => {
@@ -14,7 +15,7 @@ class Submitted extends Component {
                 Thanks for submitting a review!
                 <br/>
                 <br/>
-                <button onClick={this.restart}>Submit a new response</button>
+                <Button variant="contained" onClick={this.restart}>Submit a new response</Button>
             </div>
         )
     }

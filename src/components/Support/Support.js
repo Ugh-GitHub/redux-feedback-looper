@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Support extends Component {
     state = {
@@ -29,7 +30,7 @@ class Support extends Component {
             <div>
                 <label htmlFor='Support'>Support</label>
                 {/* <input type='number' onChange={(event) => this.handleChange(event, 'inputText')}></input> */}
-                <select onChange={(event) => this.handleChange(event, 'inputText')}>
+                <select defaultValue={this.props.reduxState.reviewReducer.support} onChange={(event) => this.handleChange(event, 'inputText')}>
                     <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -39,12 +40,12 @@ class Support extends Component {
                 </select>
                 <br/>        
                 <br/>
-                <button onClick={this.goBack}>Edit Previous</button>
+                <Button variant="contained" onClick={this.goBack}>Edit Previous</Button>
                 <span>       </span>
                 {this.state.inputText.length > 0 ?
-                    <button onClick={this.updateStore}>Next</button>
+                    <Button variant="contained" onClick={this.updateStore}>Next</Button>
                 :
-                    <button disabled>Next</button>
+                    <Button variant="contained" disabled>Next</Button>
                 }
             </div>
         )
