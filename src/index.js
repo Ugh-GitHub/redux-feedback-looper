@@ -9,14 +9,41 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-const testReducer = (state = [], action) => {
-    console.log("Hello from the reducers");
-    return state;
+const reviewReducer = (state = {feeling: '', understanding: '', support: '', comments: ''}, action) => {
+    
+    switch(action.type){
+        case 'FEELING_UPDATE':
+            this.setState({
+                feeling: action.payload
+            })
+            console.log("Hello from the reducers", state);
+            return state;
+        case 'UNDERSTANDING_UPDATE':
+            this.setState({
+                understanding: action.payload
+            })
+            console.log("Hello from the reducers", state);
+            return state;
+        case 'SUPPORT_UPDATE':
+            this.setState({
+                support: action.payload
+            })
+            console.log("Hello from the reducers", state);
+            return state;
+        case 'COMMENTS_UPDATE':
+            this.setState({
+                comments: action.payload
+            })
+            console.log("Hello from the reducers", state);
+            return state;
+        default:
+            return state;
+    }
 }
 
 const storeInstance = createStore(
     combineReducers({
-        testReducer
+        reviewReducer
     }),
     applyMiddleware(logger)
 );
