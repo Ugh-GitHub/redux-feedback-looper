@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashRouter as Link, withRouter } from 'react-router-dom';
 
-
 class Feeling extends Component {
     state = {
         inputText: ''
     }
 
     updateStore = () => {
-        this.props.dispatch({type: 'COMMENTS_UPDATE', payload: this.state.inputText});
+        this.props.dispatch({type: 'FEELING_UPDATE', payload: this.state.inputText});
         this.props.history.push('/understanding')
     }
 
@@ -38,7 +37,6 @@ class Feeling extends Component {
         )
     }
 }
-
 
 const putReduxStateOnProps = (reduxState) => ({
     reduxState: reduxState
