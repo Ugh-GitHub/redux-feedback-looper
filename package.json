@@ -7,6 +7,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.24.0",
+    "browserslist": "^4.19.1",
     "file-loader": "^6.2.0",
     "glob-parent": "^5.1.2",
     "immer": "^9.0.7",
