@@ -8,7 +8,7 @@ Simple feedback loop application.
 Include one or two screen shots of your project here (optional). Remove if unused. -->
 
 # Prerequisites
-This poject uses the following:
+This project uses the following:
 * [Node.js](https://nodejs.org/en/download/)
 * [Postgresql](https://www.postgresql.org/download/)
 
@@ -19,7 +19,7 @@ The following are recommended out of convenience:
 
 # Installation
 
-1. Download or clone down the source code.
+1. Download or clone the source code.
 2. Open the project in your favorite editor, 
 3. Pull up the project location in a terminal.
 4. Run `npm install` in the terminal.
@@ -27,10 +27,10 @@ The following are recommended out of convenience:
 
 # Usage
 
-1. Follow the on-screen prompts to input the 3 mandatory scores, and optional comments.
-2. Use the back button at any time to change an entry.
-3. Review your feeback.
-4. Submit your feeback.
+1. Follow the on-screen prompts to input the 3 mandatory scores and optional comment(s).
+2. Use the back button at any time to revise an entry.
+3. Review your feedback.
+4. Submit your feedback.
 5. You may optionally leave another response.
 
 # Built With
