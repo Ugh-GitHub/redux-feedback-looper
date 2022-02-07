@@ -1,6 +1,6 @@
 # Redux Feedback Loop
-Duration: 1-2 Hours
-Description: 
+Duration: 1-2 Hours  
+Description:  
 Simple feedback loop application.
 
 
