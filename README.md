@@ -6,6 +6,7 @@ Simple feedback loop application.
 
 <!-- Screen Shot
 Include one or two screen shots of your project here (optional). Remove if unused. -->
+![Screenshot of ](/images/FeedBackLooper_Wide.png)
 
 # Prerequisites
 This project uses the following:
