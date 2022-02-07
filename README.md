@@ -51,7 +51,7 @@ Improvements:
 * Method to try and attach it to a specific user (i.e. cookies or a user login).
 
 Impediments:
-* (2/27/22) Packages such as material-ui/core and material-ui/icons have been depreciated.
+* (2/7/22) Packages such as material-ui/core and material-ui/icons have been depreciated.
 
 # Acknowledgement
 Thanks to Prime Digital Academy.
