@@ -6,7 +6,7 @@ Simple feedback loop application.
 
 <!-- Screen Shot
 Include one or two screen shots of your project here (optional). Remove if unused. -->
-![Screenshot of Feedback Loop App](https://github.com/Ugh-GitHub/redux-feedback-looper/public/images/FeedBackLooper_Wide.png)
+![Screenshot of Feedback Loop App](public/images/FeedBackLooper_Wide.png)
 
 # Prerequisites
 This project uses the following:
